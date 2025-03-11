@@ -73,3 +73,19 @@ function deleteUser() {
 			}
 		});
 }
+function updateUser() {
+	swal({
+		title: "Are you sure?",
+		text: "you want to delete this contact...",
+		icon: "warning",
+		buttons: true,
+		dangerMode: true,
+	})
+		.then((willDelete) => {
+			if (willDelete) {
+				window.location = "/user/update_user";
+			} else {
+				swal("Your contact is safe!");
+			}
+		});
+}

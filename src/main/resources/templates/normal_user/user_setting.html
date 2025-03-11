@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal_user/base :: layout(~{::section})">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User, setting!</title>
+</head>
+<body>
+	<section>
+		<div class="card setting-container">
+			<h1 class="setting-h1">Settings</h1>
+
+			<form action="#" th:action="@{/setting/user_setting_form}" method="post">
+				<div class="section">
+					<h2 class="setting-h2">Account Settings</h2>
+					<p>Manage your account details such as username, email, and
+						password.</p>
+					<label for="username">Username</label> <input class="input-field"
+						type="text" id="username" placeholder="Enter your username" name="UserName" required="required">
+
+					<label for="email">Email</label> <input class="input-field"
+						type="email" id="email" placeholder="Enter your email" name="UserEmail" required="required"> <label
+						for="password">New Password</label> <input class="input-field"
+						type="password" id="password" placeholder="Enter new password" name="UserPassword" required="required">
+				</div>
+
+				<div class="section">
+					<h2 class="setting-h2">Preferences</h2>
+					<p>Customize your experience by selecting your preferred theme
+						and notification settings.</p>
+					<label for="theme">Theme</label> <select id="theme" name="UserTheme">
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+					</select> <label for="notifications">Enable Notifications</label> <select
+						id="notifications" name="UserEnableNotification">
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+				</div>
+
+				<div class="section">
+					<h2 class="setting-h2">Privacy & Security</h2>
+					<p>Enhance your account security with two-factor authentication
+						and backup options.</p>
+					<label for="twofactor">Two-Factor Authentication</label> <select
+						id="twofactor" name="twoFactorAuthentication">
+						<option value="enabled">Enabled</option>
+						<option value="disabled">Disabled</option>
+					</select> <label for="backup">Data Backup</label> <select id="backup" name="UserDateBackup">
+						<option value="auto">Automatic</option>
+						<option value="manual">Manual</option>
+					</select>
+				</div>
+
+				<button class="setting-button" type="submit">Save Settings</button>
+
+			</form>
+		</div>
+
+
+	</section>
+
+</body>
+</html>
+

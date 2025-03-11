@@ -295,4 +295,14 @@ public class UserController {
 		return "redirect:/signin";
 	}
 	
+    
+//  This is user-setting page which we can update user name and password
+
+    
+    @GetMapping("/user_setting")
+    public String userSetting() {
+    	return "normal_user/user_setting";
+    }
+    
+    
 }

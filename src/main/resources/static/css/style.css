@@ -75,12 +75,12 @@ body {
 		position: fixed;
 		padding-top: 20px;
 	}
-	.contect {
+	.contact {
 		margin-left: 0% !important;
 	}
 }
 
-/* Start Sidebar CSS */
+/* START SEDIBAR CSS */
 .my_profile_picture {
 	width: 30px;
 	height: 30px;
@@ -88,4 +88,128 @@ body {
 	background-size: cover; /* Ensure the image covers the element */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* USER ABOUT PAGE OF CSS */
+.about-body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.about-container {
+	max-width: 90%;
+	margin: 10px auto;
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	/* border-radius: 10px; */
+}
+
+.main-heading {
+	text-align: center;
+	color: #007BFF;
+}
+
+.heading {
+	color: #0056b3;
+}
+
+.about-paragraph {
+	line-height: 1.6;
+	text-align: justify;
+	font-family: sans-serif;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+footer p {
+	font-size: 15px;
+}
+
+/* USER SETTING PAGE OF CSS */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.setting-container {
+	max-width: 100%;
+	/* margin: 50px auto; */
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    /* border-radius: 3px; */
+}
+
+.setting-h1 {
+	text-align: center;
+	color: #007BFF;
+	margin-bottom: 20px;
+}
+
+.setting-h2 {
+	color: #0056b3;
+	margin-top: 20px;
+}
+
+p {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+label {
+	font-weight: bold;
+	display: block;
+	margin-top: 10px;
+}
+
+input, select, .setting-button {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.setting-button {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	transition: 0.3s;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.section {
+	padding: 15px;
+	background: #f9f9f9;
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+.form-control {
+	padding-left: 10px;
+	width: 97.3%;
 }

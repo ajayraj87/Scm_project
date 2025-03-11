@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
 	th:replace="normal_user/base :: layout(~{::section})">
@@ -50,8 +51,10 @@
 				<!-- Button Container -->
 				<div class="container mt-2">
 					<div class="d-grid gap-2">
-						<button th:onclick="|deleteContact(${c.cId})|" class="btn btn-danger fw-bold" type="button">Delete</button>
-						<button class="btn btn-primary fw-bold" type="button" th:onclick="|updateContact(${c.cId})|">Update</button>
+						<button th:onclick="|deleteContact(${c.cId})|"
+							class="btn btn-danger fw-bold" type="button">Delete</button>
+						<button class="btn btn-primary fw-bold" type="button"
+							th:onclick="|updateContact(${c.cId})|">Update</button>
 					</div>
 				</div>
 
