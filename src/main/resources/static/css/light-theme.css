@@ -1,0 +1,298 @@
+/* Start Home Page Styles */
+body {
+	/* background: #e2e2e2 !important;  */
+	background-color: #686460;
+}
+
+/* .bg-primary {
+	background: #009688 !important;
+} */
+
+/* -------------------------------------------------------------------- */
+
+/* Start Home page styles  OLD*/
+
+/* .banner {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+		url("../image/contact.jpg");
+	color: white;
+	background-size: cover;
+} */
+.my-card {
+	background: #fff;
+	padding: 20px;
+	border-radius: 7px;
+}
+/* End Home page styles  OLD*/
+
+/* ------------------------------------------------------------------ */
+
+/* Start Home page styles  NEW*/
+.home-card {
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+		z-index 0.3s ease-in-out;
+	position: relative;
+	z-index: 1;
+	border: 0.1px solid #e2e2e2;
+}
+
+.home-card:hover {
+	transform: translateX(10px);
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+	z-index: 10;
+}
+
+.footer-links a {
+	color: white;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+/* End Home page styles  NEW*/
+
+/* -------------------------------------------------------------------- */
+
+/* Start Sidebar CSS */
+.sidebar {
+	width: 18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 999999999999999999;
+}
+
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+
+.sidebar a:hover {
+	background: #e2e2e2;
+}
+
+.sidebar .divider {
+	height: .5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+
+.sidebar .crossBtn {
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 27px;
+	cursor: pointer;
+	font-weight: lighter;
+}
+
+.contect {
+	margin-left: 20%
+}
+
+/* media query */
+@media only screen and (max-width: 600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		background: white;
+		height: 100%;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.contact {
+		margin-left: 1.5% !important;
+	}
+}
+
+/* START SEDIBAR CSS */
+.my_profile_picture {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-size: cover; /* Ensure the image covers the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* USER ABOUT PAGE OF CSS */
+
+/* .about-body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.about-container {
+	max-width: 90%;
+	margin: 10px auto;
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.main-heading {
+	text-align: center;
+	color: #007BFF;
+}
+
+.heading {
+	color: #0056b3;
+}
+
+.about-paragraph {
+	line-height: 1.6;
+	text-align: justify;
+	font-family: sans-serif;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+footer p {
+	font-size: 15px;
+} */
+
+/* USER SETTING PAGE OF CSS */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.setting-container {
+	max-width: 100%;
+	/* margin: 50px auto; */
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	/* border-radius: 3px; */
+}
+
+.setting-h1 {
+	text-align: center;
+	color: black;
+	margin-bottom: 20px;
+	font-family: monospace;
+}
+
+.setting-h2 {
+	color: #0056b3;
+	margin-top: 20px;
+}
+
+p {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+label {
+	font-weight: bold;
+	display: block;
+	margin-top: 10px;
+}
+
+input, select, .setting-button {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.setting-button {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	transition: 0.3s;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.section {
+	padding: 15px;
+	background: #f9f9f9;
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+.form-control {
+	padding-left: 10px;
+	width: 97.3%;
+}
+
+
+/*  ************************************   */ 
+
+    /* Media query for screens with width less than 500px */
+   
+   @media screen and (max-width: 1015px) {
+  /* Adjust card and image size for smaller screens */
+  .my-card {
+    margin: 8px; /* Reduce margin */
+    padding: 12px; /* Slightly adjusted padding */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .my_profile_picture {
+    width: 80px; /* Slightly smaller profile image */
+    height: 80px;
+  }
+
+  h3 {
+    font-size: 18px; /* Increase font size of heading for better visibility */
+  }
+
+  table {
+    font-size: 13px; /* Slightly larger table font for better readability */
+  }
+
+  .btn {
+    font-size: 13px; /* Adjust button font size */
+    margin: 5px; /* A little more space between buttons */
+    padding: 8px 16px; /* Adjust button padding for better touch targets */
+  }
+
+  /* Adjust the card body and table layout for better readability on small screens */
+  .card-body {
+    padding: 18px; /* Slightly more padding for spacing */
+  }
+
+  .container {
+    padding: 0 12px; /* Increase side padding for better content spacing */
+  }
+
+  .d-grid {
+    grid-template-columns: 1fr; /* Stack buttons on top of each other */
+  }
+}
+   

@@ -23,6 +23,8 @@ public class MyConfig {
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+	
+	
 
 	@Bean
 	public UserDetailsService userDetailsService() {

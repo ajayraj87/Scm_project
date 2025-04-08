@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
-					<div class="my-card mt-2">
+					<div class="my-card mt-3">
 
 						<!-- check box error -->
 						<div th:if="${session.message}"
@@ -27,7 +27,7 @@
 							<img style="width: 75px" th:src="@{/image/membership.png}"
 								alt="Membership Image" />
 						</div>
-						<h1 class="text-center">Register here</h1>
+						<h1 class="text-center text-primary">Register here</h1>
 
 						<form th:action="@{/do_ragister}" method="post"
 							th:object="${user}">
@@ -84,25 +84,25 @@
 
                             <!-- Profile fields -->
                             
-                            <div class="container mt-2">
+                            <div class="form-group mt-2">
                                    <input type="file" name="image">
                             </div>
 
 							<!-- terms and condition agreement -->
 							<div
-								class="form-group form-check d-flex justify-content-center p-1">
+								class="form-group form-check d-flex justify-content-center align-items-center p-1">
 								<input name="agreement" type="checkbox" class="form-check-input"
 									id="agreement"> <label class="ms-1" for="agreement">Accept
 									terms conditions </label>
 							</div>
 
 							<!-- user button -->
-							<div class="container text-center mt-1">
-								<button type="submit" class="btn bg-primary text-white">Submit</button>
-								<button type="reset" class="btn btn btn-warning text-white">Reset</button>
+							<div class="form-group text-center mt-1">
+								<button type="submit" class="btn bg-primary text-white col-md-12">Submit</button>
+								<button type="reset" class="btn btn btn-warning text-white col-md-12 mt-2">Reset</button>
 							</div>
 							<div align="center">
-								<p class="mt-2">
+								<p class="mt-2 fw-bold">
 									You are registered? <a th:href="@{/signin}" href="#">Login Here</a>
 								</p>
 							</div>

@@ -133,7 +133,7 @@ public class UserController {
 
 	    Contact contact = this.contactRepository.findById(cid)
 	                         .orElseThrow(() -> new RuntimeException("Contact with ID " + cid + " not found!"));
-	    System.out.println(contact.getName() + " "+ contact.getEmail());
+//	    System.out.println(contact.getName() + " "+ contact.getEmail());
 	    
 	    String userName = principal.getName();
 	    User user = this.userRepository.findByName(userName).orElse(null);
@@ -290,7 +290,7 @@ public class UserController {
     	
 		this.userRepository.save(user);
 		
-		session.setAttribute("message", new Message("Your update was completed successfully!! /n🔐 Please sign in to continue.", "alert-success"));
+		session.setAttribute("message", new Message("Your update was completed successfully!! 🔐 Please sign in to continue.", "alert-success"));
 		
 		return "redirect:/signin";
 	}
@@ -300,9 +300,17 @@ public class UserController {
 
     
     @GetMapping("/user_setting")
-    public String userSetting() {
+    public String userSetting(Model model) {
+		model.addAttribute("title" , "User Setting Page");
     	return "normal_user/user_setting";
+    	
     }
     
+    @PostMapping("/user_setting_form")
+    public void updateUserPassword(@ModelAttribute User user , Principal principal) {
+    	String name = principal.getName();
+    	System.out.println(name);
+    	System.out.println("user setting form clicked");
+    }
     
 }

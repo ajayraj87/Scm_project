@@ -8,14 +8,79 @@
 </head>
 <body>
 
-	<section
-		class="banner d-flex justify-content-center align-items-center">
-		<div class="text-center">
+	<section>
+		<!--class="banner d-flex justify-content-center align-items-center">
+		 <div class="text-center">
 			<h2>Smart Contact Manager</h2>
 			<p>Start Collecting your contacts in very smarter way. We provide
 				very efficient and smarter way of handling contacts.</p>
 			<button class="btn bg-primary btn-lg text-white">Get Start</button>
+		</div> -->
+
+
+		<!-- Hero Section -->
+		<header class="bg-light text-center py-5">
+			<div class="container">
+				<h1 class="fw-bolder">Welcome to Smart Contact Manager</h1>
+				<p class="lead fs-5">Manage your contacts efficiently and
+					securely.</p>
+				<a href="#" th:href="@{/signup}" class="btn btn-primary btn-lg">Get
+					Started</a>
+			</div>
+		</header>
+
+		<!-- Features Section -->
+		<div class="bg-white">
+			<section class="container py-5">
+				<div class="text-center mb-4">
+					<h2 class="fw-bold">Why Choose Smart Contact Manager?</h2>
+					<p class="text-muted fs-6">Experience seamless and secure
+						contact management.</p>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-4">
+						<div class="home-card shadow-sm p-4">
+							<div class="text-start">
+								<img src="https://cdn-icons-png.flaticon.com/128/847/847969.png"
+									alt="Easy Management" class="mb-3" width="50">
+							</div>
+							<h4>Easy Contact Management</h4>
+							<p>Store, edit, and manage all your contacts in one place
+								with ease.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="home-card shadow-sm p-4">
+							<div class="text-start">
+								<img
+									src="https://cdn-icons-png.flaticon.com/128/1828/1828640.png"
+									alt="Secure" class="mb-3" width="50">
+							</div>
+							<h4>Secure & Reliable</h4>
+							<p>We ensure the highest level of security to keep your
+								contacts safe.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="home-card shadow-sm p-4">
+							<div class="text-start">
+								<img
+									src="https://cdn-icons-png.flaticon.com/128/2874/2874883.png"
+									alt="Anywhere Access" class="mb-3" width="50">
+							</div>
+							<h4>Accessible Anywhere</h4>
+							<p>Access your contacts anytime, anywhere, from any device.
+								easy way</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
+
+ <!-- Include the footer from footer.html -->
+ 
+  <div th:replace="~{footer.html}"></div>
+  
 	</section>
 
 </body>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <section>
-    <div style="background: #ffffff" class="card container-fluid p-3">
+    <div class="my-card container-fluid p-3">
         <!-- Http Session Error Handler -->
         <div th:if="${session.message}" class="container text-center p-3">
             <div th:classappend="${session.message.type}"
@@ -22,8 +22,8 @@
 
         <!-- Make Table Responsive -->
         <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead>
+            <table class="table  table-hover">
+                <thead  class="light">
                 <tr>
                     <th scope="col">#Id</th>
                     <th scope="col">Name</th>
@@ -32,7 +32,7 @@
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody  class="light">
                 <tr th:each="c:${contacts}">
                     <th scope="row" th:text="'SCM2025-' + ${c.cId}">1</th>
                     <td>
@@ -41,7 +41,7 @@
                         <span th:text="${c.name}" class="ms-2"></span>
                     </td>
                     <td>
-                        <a th:text="${c.email}" th:href="@{/user/contact_detail/}+${c.cId}"></a>
+                        <a class="light" th:text="${c.email}" th:href="@{/user/contact_detail/}+${c.cId}"></a>
                     </td>
                     <td th:text="${c.phone}">Mark</td>
                     <td>

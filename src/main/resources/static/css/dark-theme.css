@@ -1,0 +1,267 @@
+/* Start Home Page Styles */
+body {
+	/* Use a dark background for the body */
+	background-color: #121212; /* Dark background */
+	color: #e2e2e2; /* Light text color */
+}
+
+/* .bg-primary {
+	background: #009688 !important;
+} */
+
+/* -------------------------------------------------------------------- */
+
+/* Start Home page styles  OLD*/
+.my-card {
+	background: #333; /* Darker background for cards */
+	color: #e2e2e2; /* Light text color */
+	padding: 20px;
+	border-radius: 7px;
+	color: #fff; /* Light text color */
+}
+
+/* End Home page styles  OLD*/
+
+/* ------------------------------------------------------------------ */
+
+/* Start Home page styles  NEW*/
+.home-card {
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+		z-index 0.3s ease-in-out;
+	position: relative;
+	z-index: 1;
+	border: 0.1px solid #444; /* Darker border */
+}
+
+.home-card:hover {
+	transform: translateX(10px);
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
+	z-index: 10;
+}
+
+.footer-links a {
+	color: #e2e2e2; /* Light text for footer links */
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+/* End Home page styles  NEW*/
+
+/* -------------------------------------------------------------------- */
+
+/* Start Sidebar CSS */
+.sidebar {
+	width: 18%;
+	background: #222; /* Dark background for sidebar */
+	color: #e2e2e2; /* Light text color */
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 999999999999999999;
+}
+
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: #bbb; /* Lighter text for sidebar links */
+}
+
+.sidebar a:hover {
+	background: #444; /* Slightly lighter background for hover */
+}
+
+.sidebar .divider {
+	height: .5px;
+	width: 100%;
+	background: #444; /* Dark divider */
+	margin-top: 10px;
+}
+
+.sidebar .crossBtn {
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 27px;
+	cursor: pointer;
+	font-weight: lighter;
+	color: #fff; /* Light text color for the cross button */
+}
+
+.contect {
+	margin-left: 20%;
+}
+
+/* media query */
+@media only screen and (max-width: 600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		background: #222; /* Dark sidebar background for small screens */
+		height: 100%;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.contact {
+		margin-left: 1.5% !important;
+	}
+}
+
+/* START SEDIBAR CSS */
+.my_profile_picture {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* USER ABOUT PAGE OF CSS */
+
+/* .about-body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.about-container {
+	max-width: 90%;
+	margin: 10px auto;
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.main-heading {
+	text-align: center;
+	color: #007BFF;
+}
+
+.heading {
+	color: #0056b3;
+}
+
+.about-paragraph {
+	line-height: 1.6;
+	text-align: justify;
+	font-family: sans-serif;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+footer p {
+	font-size: 15px;
+} */
+
+/* USER SETTING PAGE OF CSS */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #121212; /* Dark background */
+	color: #e2e2e2; /* Light text color */
+}
+
+.setting-container {
+	max-width: 100%;
+	/* margin: 50px auto; */
+	padding: 20px;
+	background: #333; /* Dark background */
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Darker shadow */
+	/* border-radius: 3px; */
+}
+
+.setting-h1 {
+	text-align: center;
+	color: #fff; /* Light text */
+	margin-bottom: 20px;
+	font-family: monospace;
+}
+
+.setting-h2 {
+	color: #007BFF;
+	margin-top: 20px;
+}
+
+p {
+	font-size: 14px;
+	color: #bbb; /* Light color for paragraph text */
+	margin-bottom: 10px;
+}
+
+label {
+	font-weight: bold;
+	display: block;
+	margin-top: 10px;
+	color: #e2e2e2; /* Light label color */
+}
+
+input, select, .setting-button {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #444; /* Darker border */
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #222; /* Dark input/select background */
+	color: #e2e2e2; /* Light text color */
+}
+
+.setting-button {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	transition: 0.3s;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.section {
+	padding: 15px;
+	background: #333; /* Dark background for sections */
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+.form-control {
+	padding-left: 10px;
+	width: 97.3%;
+}
+
+.light {
+	color: #e2e2e2; /* Light text color */
+}
+
+.dark {
+	background: #333; /* Darker background for cards */
+	color: #e2e2e2; /* Light text color */
+	
+}
+
+.only_form {
+	background-color: black;
+	color: white;
+	margin-bottom: 0.5px;
+}

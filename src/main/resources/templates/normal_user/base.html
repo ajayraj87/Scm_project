@@ -17,13 +17,13 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 	integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="/css/style.css">
+<link id="theme-stylesheet" rel="stylesheet" href="/css/light-theme.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 <title th:text="${title}">Hello, Base!</title>
 </head>
-<body>
+<body id="base_body">
 
 	<!-- Start Navbar  -->
 
@@ -61,30 +61,28 @@
 
 	<div class="sidebar mt-2">
 		<span class="crossBtn"><i onclick="toggleSidebar()"
-			class="fa fa-times" aria-hidden="true"></i></span> <a
-			th:href="@{/user/index}" href="#" class="item"><i
-			class="fa fa-home" aria-hidden="true"></i> Home</a> <a href="#"
-			th:href="@{/user/view_contact/0}" class="item"><i
-			class="fa fa-id-card" aria-hidden="true"></i> View Contacts</a> <a
-			th:href="@{/user/add-contact}" href="#" class="item"><i
-			class="fa fa-pencil" aria-hidden="true"></i> Add Contact</a> <a href="#" th:href="@{/user/your_profile}"
-			class="item"><i class="fa fa-user-circle" aria-hidden="true"></i>
-			Your Profile</a> <a href="#" th:href="@{/user/user_setting}" class="item"><i class="fa fa-cogs"
-			aria-hidden="true"></i> Setting</a> <a th:href="@{/logout}" href="#"
-			class="item"><i class="fa fa-sign-out" aria-hidden="true"></i>
-			Logout</a>
+			class="fa fa-times" aria-hidden="true"></i></span> 
+			<a th:href="@{/user/index}" href="#" class="item"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+			<a href="#"	th:href="@{/user/view_contact/0}" class="item"><i class="fa fa-id-card" aria-hidden="true"></i> View Contacts</a> 
+			<a th:href="@{/user/add-contact}" href="#" class="item"><i	class="fa fa-pencil" aria-hidden="true"></i> Add Contact</a> 
+			<a href="#" th:href="@{/user/your_profile}" class="item"><i class="fa fa-user-circle" aria-hidden="true"></i> Your Profile</a> 
+			<a href="#" class="nav-link dropdown-toggle item" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
+               <ul class="dropdown-menu only_form" aria-labelledby="navbarDropdownMenuLink" style="border: none;">
+                   <li><a class="dropdown-item" href="#" th:href="@{/user/user_setting}"><i class="fa fa-key"></i> Change Password</a></li>
+                   <li><a class="dropdown-item" href="#" onclick="changeCSS('dark')"><i class="fa fa-moon"></i> Dark Theme</a></li>
+                   <li><a class="dropdown-item" href="#" onclick="changeCSS('light')"><i class="fa fa-sun"></i> Light Theme</a></li>
+               </ul>
+			<a th:href="@{/logout}" href="#" class="item"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
 		<div class="divider"></div>
 	</div>
-
-	<!-- Error Handler -->
 
 
 	<!-- Start Content -->
 
-	<div class="contect mt-5 pt-2">
+	<div class="contect contact mt-5 pt-2">
 		<i onclick="toggleSidebar()" class="fa fa-bars mt-2 fs-4"
 			aria-hidden="true"></i>
-		<div class="card contact" th:replace="${contact}"></div>
+		<div class="my-card" th:replace="${contact}"></div>
 	</div>
 
 	<!-- End Content -->
@@ -102,7 +100,7 @@
 
 
 
-	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/scriptFile.js"></script>
 
 	<!-- Option 2: Separate Popper and Bootstrap JS -->
 	<!--

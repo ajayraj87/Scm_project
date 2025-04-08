@@ -7,42 +7,80 @@
 <title>Hello, about!</title>
 </head>
 <body class="about-body">
-  <section>
-	  <div class="about-container">
-        <h1 class="main-heading">About Smart Contact Manager</h1>
-        <p class="about-paragraph">Smart Contact Manager is a modern web application designed to help users efficiently store, manage, and organize their contacts in a secure and user-friendly manner. Whether you are an individual or a business, this tool makes managing contacts seamless and hassle-free.</p>
-        
-        <h2 class="heading">Key Features</h2>
-        <ul>
-            <li>Secure and encrypted contact storage</li>
-            <li>Advanced search and filtering options</li>
-            <li>Easy-to-use and intuitive interface</li>
-            <li>Multi-device accessibility</li>
-            <li>Cloud backup and restore functionality</li>
-        </ul>
-        
-        <h2 class="heading">Why Choose Smart Contact Manager?</h2>
-        <p class="about-paragraph">Our goal is to provide a simple yet powerful solution for contact management, improving productivity and communication for users worldwide. The platform is built with the latest web technologies to ensure high performance and security. Whether you need to store personal contacts or manage professional connections, Smart Contact Manager has you covered.</p>
-        
-        <h2 class="heading">How It Works</h2>
-        <p class="about-paragraph">Getting started with Smart Contact Manager is easy:</p>
-        <ol>
-            <li>Sign up and create your account.</li>
-            <li>Add your contacts with details like name, phone number, email, and address.</li>
-            <li>Use search and filter features to quickly find contacts.</li>
-            <li>Secure your data with authentication and encryption.</li>
-        </ol>
-        
-        <h2 class="heading">Contact Us</h2>
-        <p class="about-paragraph">If you have any questions, feedback, or need support, feel free to reach out to us at <a href="mailto:support@smartcontactmanager.com">support@smartcontactmanager.com</a>.</p>
-    </div>
+	<section>
+		<!-- <div class="about-container">
+			<h1 class="main-heading">About Smart Contact Manager</h1>
+			<p class="about-paragraph">Smart Contact Manager is a modern web
+				application designed to help users efficiently store, manage, and
+				organize their contacts in a secure and user-friendly manner.
+				Whether you are an individual or a business, this tool makes
+				managing contacts seamless and hassle-free.</p>
 
+			<h2 class="heading">Key Features</h2>
+			<ul>
+				<li>Secure and encrypted contact storage</li>
+				<li>Advanced search and filtering options</li>
+				<li>Easy-to-use and intuitive interface</li>
+				<li>Multi-device accessibility</li>
+				<li>Cloud backup and restore functionality</li>
+			</ul>
 
-    <footer>
-      <p>&copy; 2025 Our Company. All rights reserved.</p>
-    </footer>
-    
-  </section>
+			<h2 class="heading">Why Choose Smart Contact Manager?</h2>
+			<p class="about-paragraph">Our goal is to provide a simple yet
+				powerful solution for contact management, improving productivity and
+				communication for users worldwide. The platform is built with the
+				latest web technologies to ensure high performance and security.
+				Whether you need to store personal contacts or manage professional
+				connections, Smart Contact Manager has you covered.</p>
+
+			<h2 class="heading">How It Works</h2>
+			<p class="about-paragraph">Getting started with Smart Contact
+				Manager is easy:</p>
+			<ol>
+				<li>Sign up and create your account.</li>
+				<li>Add your contacts with details like name, phone number,
+					email, and address.</li>
+				<li>Use search and filter features to quickly find contacts.</li>
+				<li>Secure your data with authentication and encryption.</li>
+			</ol>
+
+			<h2 class="heading">Contact Us</h2>
+			<p class="about-paragraph">
+				If you have any questions, feedback, or need support, feel free to
+				reach out to us at <a href="mailto:support@smartcontactmanager.com">support@smartcontactmanager.com</a>.
+			</p>
+		</div> -->
+
+		<!-- About Section -->
+		<section class="py-5 bg-white">
+			<div class="container text-center">
+				<h1 class="fw-bold">About Smart Contact Manager</h1>
+				<p class="lead text-muted">Manage all your contacts securely and
+					efficiently.</p>
+
+				<div class="row mt-5">
+					<div class="col-md-6">
+						<img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
+							alt="About Image" class="img-fluid rounded">
+					</div>
+					<div class="col-md-6 text-start">
+						<h3>Why Choose Us?</h3>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">✔ Easy to use contact management</li>
+							<li class="list-group-item">✔ Secure and encrypted storage</li>
+							<li class="list-group-item">✔ Cloud backup and sync</li>
+							<li class="list-group-item">✔ Advanced search and filters</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Include the footer from footer.html -->
+		
+		<div th:replace="~{footer.html}"></div>
+
+	</section>
 
 </body>
 </html>

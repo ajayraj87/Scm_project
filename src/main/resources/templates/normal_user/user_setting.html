@@ -8,58 +8,40 @@
 </head>
 <body>
 	<section>
-		<div class="card setting-container">
-			<h1 class="setting-h1">Settings</h1>
-
-			<form action="#" th:action="@{/setting/user_setting_form}" method="post">
-				<div class="section">
-					<h2 class="setting-h2">Account Settings</h2>
-					<p>Manage your account details such as username, email, and
-						password.</p>
-					<label for="username">Username</label> <input class="input-field"
-						type="text" id="username" placeholder="Enter your username" name="UserName" required="required">
-
-					<label for="email">Email</label> <input class="input-field"
-						type="email" id="email" placeholder="Enter your email" name="UserEmail" required="required"> <label
-						for="password">New Password</label> <input class="input-field"
-						type="password" id="password" placeholder="Enter new password" name="UserPassword" required="required">
-				</div>
-
-				<div class="section">
-					<h2 class="setting-h2">Preferences</h2>
-					<p>Customize your experience by selecting your preferred theme
-						and notification settings.</p>
-					<label for="theme">Theme</label> <select id="theme" name="UserTheme">
-						<option value="light">Light</option>
-						<option value="dark">Dark</option>
-					</select> <label for="notifications">Enable Notifications</label> <select
-						id="notifications" name="UserEnableNotification">
-						<option value="yes">Yes</option>
-						<option value="no">No</option>
-					</select>
-				</div>
-
-				<div class="section">
-					<h2 class="setting-h2">Privacy & Security</h2>
-					<p>Enhance your account security with two-factor authentication
-						and backup options.</p>
-					<label for="twofactor">Two-Factor Authentication</label> <select
-						id="twofactor" name="twoFactorAuthentication">
-						<option value="enabled">Enabled</option>
-						<option value="disabled">Disabled</option>
-					</select> <label for="backup">Data Backup</label> <select id="backup" name="UserDateBackup">
-						<option value="auto">Automatic</option>
-						<option value="manual">Manual</option>
-					</select>
-				</div>
-
-				<button class="setting-button" type="submit">Save Settings</button>
-
-			</form>
-		</div>
-
-
-	</section>
+		<div class="container d-flex justify-content-center align-items-start vh-100 mt-2">
+        <div id="setting_page" class="my-card" style="width: 100%; max-width: 700px;">
+            <div class="card-body">
+                <h5 class="card-title text-center mb-4">Change Password</h5>
+                
+                 <!-- Session error handler -->
+                  <div th:if="${session.message}" class="container text-center">
+                       <div th:classappend="${session.message.type}" class="alert" role="alert">
+                           <span th:text="${session.message.content}"></span>
+                       </div>
+                           <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+                 </div>
+                
+                <form th:action="@{/setting/user_setting_form}" method="POST">
+                    <div class="mb-3">
+                        <label for="current-password" class="form-label">Current Password</label>
+                        <input type="password" class="form-control only_form" id="current-password" placeholder="Enter Current Password" name="current_password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="new-password" class="form-label">New Password</label>
+                        <input type="password" class="form-control only_form" id="new-password" placeholder="Enter New Password" name="new_password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control only_form" id="confirm-password" placeholder="Enter Confirm New Password" name="confirm_new_password" required>
+                    </div>
+                    <div class="d-grid me-3">
+                        <button type="submit" class="btn btn-primary ">Change Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

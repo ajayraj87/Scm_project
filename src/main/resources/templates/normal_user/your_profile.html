@@ -8,10 +8,10 @@
 </head>
 <body>
 	<section>
-		<div class="card me-2">
+		<div class="my-card me-2">
 			<div class="card-body text-center">
 				<!-- Image Container -->
-				<div class="container">
+				<div class="container light">
 					<img style="width: 200px; height: 200px" class="my_profile_picture"
 						alt="profile photo" src="" th:src="@{'/image/'+${user.image}}">
 					<h3 class="mt-2">
@@ -21,13 +21,13 @@
 				<!-- Table Container -->
 				<div class="container pt-2">
 					<table class="table">
-						<thead>
+						<thead class="light">
 							<tr>
 								<th scope="col">#USERId</th>
 								<th scope="col"><span th:text="'UID2025-'+${user.id}"></span></th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody class="light">
 							<tr>
 								<th scope="col">Email</th>
 								<td scope="col"><span th:text="${user.email}"></span></td>
