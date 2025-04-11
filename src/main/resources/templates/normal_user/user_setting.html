@@ -11,7 +11,7 @@
 		<div class="container d-flex justify-content-center align-items-start vh-100 mt-2">
         <div id="setting_page" class="my-card" style="width: 100%; max-width: 700px;">
             <div class="card-body">
-                <h5 class="card-title text-center mb-4">Change Password</h5>
+                <h4 class="card-title text-center mb-4 fw-bold">Change Password</h4>
                 
                  <!-- Session error handler -->
                   <div th:if="${session.message}" class="container text-center">
@@ -30,9 +30,12 @@
                         <label for="new-password" class="form-label">New Password</label>
                         <input type="password" class="form-control only_form" id="new-password" placeholder="Enter New Password" name="new_password" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="confirm-password" class="form-label">Confirm New Password</label>
                         <input type="password" class="form-control only_form" id="confirm-password" placeholder="Enter Confirm New Password" name="confirm_new_password" required>
+                    </div>
+                    <div class="mb-3 me-3 text-end textHover">
+                    <a style="text-decoration: none;" href="#" th:href="@{/setting/send-email}">(Forgot Your Password!)</a>
                     </div>
                     <div class="d-grid me-3">
                         <button type="submit" class="btn btn-primary ">Change Password</button>

@@ -94,27 +94,36 @@ function updateUser() {
 // This is function for the theme change 
 
 function changeCSS(theme) {
-    const linkElement = document.getElementById('theme-stylesheet');
-    
-    // Update the CSS file based on the theme selected
-    if (theme === 'dark') {
-        linkElement.setAttribute('href', '/css/dark-theme.css');
-        localStorage.setItem('theme', 'dark'); // Save the theme choice in localStorage
-    } else if (theme === 'light') {
-        linkElement.setAttribute('href', '/css/light-theme.css');
-        localStorage.setItem('theme', 'light'); // Save the theme choice in localStorage
-    }
+	const linkElement = document.getElementById('theme-stylesheet');
+
+	// Update the CSS file based on the theme selected
+	if (theme === 'dark') {
+		linkElement.setAttribute('href', '/css/dark-theme.css');
+		localStorage.setItem('theme', 'dark'); // Save the theme choice in localStorage
+	} else if (theme === 'light') {
+		linkElement.setAttribute('href', '/css/light-theme.css');
+		localStorage.setItem('theme', 'light'); // Save the theme choice in localStorage
+	}
 }
 
 // Apply the theme based on saved preference on page load
 window.onload = function() {
-    const savedTheme = localStorage.getItem('theme'); // Get the saved theme from localStorage
-    if (savedTheme) {
-        changeCSS(savedTheme); // Apply the saved theme
-    } else {
-        // If no theme is saved, default to light
-        changeCSS('light');
-    }
+	const savedTheme = localStorage.getItem('theme'); // Get the saved theme from localStorage
+	if (savedTheme) {
+		changeCSS(savedTheme); // Apply the saved theme
+	} else {
+		// If no theme is saved, default to light
+		changeCSS('light');
+	}
 };
 
+// this is function for the combineOTP
+
+function combineOTP() {
+	const inputs = document.querySelectorAll(".otp-input");
+	let otp = "";
+	inputs.forEach(input => otp += input.value);
+	document.getElementById("otpValue").value = otp;
+	//console.log(otp);
+}
 

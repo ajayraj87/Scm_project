@@ -250,49 +250,63 @@ button:hover {
 	width: 97.3%;
 }
 
+/*  ************************************   */
 
-/*  ************************************   */ 
+/* Media query for screens with width less than 500px */
+@media screen and (max-width: 1015px) {
+	/* Adjust card and image size for smaller screens */
+	.my-card {
+		margin: 8px; /* Reduce margin */
+		padding: 12px; /* Slightly adjusted padding */
+		font-size: 14px; /* Reduce font size */
+	}
+	.my_profile_picture {
+		width: 80px; /* Slightly smaller profile image */
+		height: 80px;
+	}
+	h3 {
+		font-size: 18px;
+		/* Increase font size of heading for better visibility */
+	}
+	table {
+		font-size: 13px;
+		/* Slightly larger table font for better readability */
+	}
+	.btn {
+		font-size: 13px; /* Adjust button font size */
+		margin: 5px; /* A little more space between buttons */
+		padding: 8px 16px;
+		/* Adjust button padding for better touch targets */
+	}
 
-    /* Media query for screens with width less than 500px */
-   
-   @media screen and (max-width: 1015px) {
-  /* Adjust card and image size for smaller screens */
-  .my-card {
-    margin: 8px; /* Reduce margin */
-    padding: 12px; /* Slightly adjusted padding */
-    font-size: 14px; /* Reduce font size */
-  }
-
-  .my_profile_picture {
-    width: 80px; /* Slightly smaller profile image */
-    height: 80px;
-  }
-
-  h3 {
-    font-size: 18px; /* Increase font size of heading for better visibility */
-  }
-
-  table {
-    font-size: 13px; /* Slightly larger table font for better readability */
-  }
-
-  .btn {
-    font-size: 13px; /* Adjust button font size */
-    margin: 5px; /* A little more space between buttons */
-    padding: 8px 16px; /* Adjust button padding for better touch targets */
-  }
-
-  /* Adjust the card body and table layout for better readability on small screens */
-  .card-body {
-    padding: 18px; /* Slightly more padding for spacing */
-  }
-
-  .container {
-    padding: 0 12px; /* Increase side padding for better content spacing */
-  }
-
-  .d-grid {
-    grid-template-columns: 1fr; /* Stack buttons on top of each other */
-  }
+	/* Adjust the card body and table layout for better readability on small screens */
+	.card-body {
+		padding: 18px; /* Slightly more padding for spacing */
+	}
+	.container {
+		padding: 0 12px;
+		/* Increase side padding for better content spacing */
+	}
+	.d-grid {
+		grid-template-columns: 1fr; /* Stack buttons on top of each other */
+	}
 }
-   
+
+/* This is css use for the Otp form  */
+.otp-input {
+	width: 3rem;
+	height: 3rem;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-right: 0.5rem;
+}
+
+.otp-container {
+	display: flex;
+	justify-content: center;
+}
+
+.textHover :hover {
+	color: orange;
+	font-style: italic;
+}
